@@ -1,8 +1,8 @@
-![Menu Background](grafos\estados\brasileiros.png)
+![Menu Background](grafoBrasil.png)
 
 # Busca em Profundiade e Busca em Largura
 
-Jogo da Cobra com agente que executa algoritmos de busca.
+Listagem de estados obtidos pela busca em largura e profundidade, dado um estado de partida e um de chegada.
 
 * Escrito em python
 * Busca em largura
