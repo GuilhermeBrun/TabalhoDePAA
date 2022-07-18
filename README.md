@@ -1,4 +1,4 @@
-![Menu Background](grafoBrasil.png)
+![Menu Background](img/grafoBrasil.png)
 
 # Busca em Profundiade e Busca em Largura
 
@@ -17,6 +17,9 @@ Listagem de estados obtidos pela busca em largura e profundidade, dado um estado
 Baixe o código do repositório e execute o arquivo como qualquer outro script python.
 ```
 python buscaProfundidade.py
+```
+```
+python buscaLargura.py
 ```
 
 

@@ -1,6 +1,6 @@
 import pdb
 
-mD = {
+dicionarioEstados = {
 0: 'AC',
 1: 'AM',
 2: 'RO',
@@ -55,23 +55,24 @@ grafo = [ [1, 2], #vizinhos do no 0
         [23, 25], #vizinhos do no 24
         [24]] #vizinhos do no 25
 
+def buscaLargura(noPartida, noChegada):
+    fila = []
+    fila.append(noPartida)
+    while len(fila) > 0:
+        no = fila.pop(0)
+        nosVisitados[no] = 1
+        print(dicionarioEstados[no])
+     
+        if no == noChegada:
+            print("Chegou ao destino")
+            break
+        for i in grafo[no]:
+            if nosVisitados[i] == 0:
+                nosVisitados[i] = 1
+                fila.append(i)
+
 nosVisitados = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,]
 noPartida = 0
 noChegada = 25
 
-def busca_profundidade(noPartida, noChegada):
-    pilha = []
-    pilha.append(noPartida)
-    while len(pilha) > 0:
-        noDaVez = pilha.pop()
-        if nosVisitados[noDaVez] == 0:
-            nosVisitados[noDaVez] = 1
-            print(mD[noDaVez])
-            if noDaVez == noChegada:
-                print("Chegou ao destino")
-                break
-            else:
-                for no in grafo[noDaVez]:
-                    pilha.append(no)
-
-busca_profundidade(noPartida, noChegada)
+buscaLargura(noPartida, noChegada)
